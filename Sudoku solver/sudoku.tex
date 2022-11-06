@@ -1,0 +1,57 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx}
+\title{Project Work\\SUDOKU}
+\author{Atthaluri Shashank}
+\begin{document}
+\maketitle
+\section{Introdution}
+      Sudoku originally called Number Place.is a logic-based,combinatorial number-placement puzzle.Number puzzles appeared in newspapers in the late 19th century, when French puzzle setters began experimenting with removing numbers from magic squares. Le Siècle, a Paris daily, published a partially completed 9×9 magic square with 3×3 sub-squares on November 19, 1892.It was not a Sudoku because it contained double-digit numbers and required arithmetic rather than logic to solve, but it shared key characteristics: each row, column and sub-square added up to the same number.Completed puzzles are always a type of Latin square with an additional constraint on the contents of individual regions.On July 6, 1895, Le Siècle's rival, La France, refined the puzzle so that it was almost a modern Sudoku. It simplified the 9×9 magic square puzzle so that each row, column and broken diagonals contained only the numbers 1–9, but did not mark the sub-squares. Although they are unmarked, each 3×3 sub-square does indeed comprise the numbers 1–9 and the additional constraint on the broken diagonals leads to only one solution.The modern Sudoku was most likely designed anonymously by Howard Garns, a 74-year-old retired architect and freelance puzzle constructor from Connersville, Indiana, and first published in 1979 by Dell Magazines as Number Place (the earliest known examples of modern Sudoku).Garns's name was always present on the list of contributors in issues of Dell Pencil Puzzles and Word Games that included Number Place, and was always absent from issues that did not.He died in 1989 before getting a chance to see his creation as a worldwide phenomenon.It is unclear if Garns was familiar with any of the French newspapers listed above. 
+      
+      The puzzle was introduced in Japan by Nikoli in the paper Monthly Nikolist in April 1984 as Sūji wa dokushin ni kagiru, which also can be translated as "the digits must be single" or "the digits are limited to one occurrence.In 1986, Nikoli introduced two innovations: the number of givens was restricted to no more than 32, and puzzles became "symmetrical" (meaning the givens were distributed in rotationally symmetric cells). It is now published in mainstream Japanese periodicals, such as the Asahi Shimbun
+      
+      The Times of London began featuring Sudoku in late 2004 after a successful appearance in a local US newspaper, from the efforts of Wayne Gould, and rapidly spread to other newspapers as a regular feature.Gould devised a computer program to produce unique puzzles rapidly.
+      There are different types of sudokus some of them are:- 
+       \begin{itemize}
+      \item Mini Sudoku:-Which mean 6x6 matrix sudoku.It is also called "Junior sudoku"
+      \item Killer Sudoku:-The Killer Sudoku variant combines elements of Sudoku.
+      \item Alphabetical Sudoku:-Alphabetical variations have emerged, sometimes called Wordoku.
+      \item Hypersudoku:-Hypersudoku is one of the most popular variants. It is published by newspapers and magazines around the world and is also known as "NRC Sudoku".The layout is identical to a normal Sudoku, but with additional interior squares defined in which the numbers 1 to 9 must appear. The solving algorithm is slightly different from the normal Sudoku puzzles because of the emphasis on the overlapping squares.
+\section{General rules for solving sudoku}
+  \item A typical Sudoku puzzle grid, with nine rows and nine columns that intersect at square.
+\item Use the numbers 1 to 9 each nine times to the placement of numbers beyond the usual row, column, and box requirements.
+\item Firstly choose a number and place it in the blank box by checking whether the same number will coincide in that row or column or respective matrix.
+\item In the same way place every number upto nine,nine times.
+
+
+\section{Method refered to solve the program}
+ We used Crook's pencil and paper method to solve Sudoku.This method was developed by J.F.Crook.He is a professor emeritus of computer science,Winthrop Universuity,Rock Hill,SC.This method is briefly written below.
+\item Firstly check for the empty boxes. 
+\item If you find an empty box, then check  the elements in row and column in the respective 3 x 3 matrix.
+\begin{center}
+\begin{figure}[h]
+\includegraphics[scale=1]{Screenshot-1.png}
+\end{figure}
+\end{center}
+\item In the fig below the empty boxes were filled with some numbers.These numbers are the possiblities with which the box can be filled.
+\item In the fig the box(1,7) is filled with 3,4,5,9.The box(2,7) is filled with 4,5,9.In box(3,8) 2,3,4,8 was filled.In box(3,9) 2,3,4,5 was filled.As per em As we can see boxes (1,7),(2,7),(3,8),(3,9).The possibilities were only 3,4,5,9.That mean other empty boxes would not have a possiblity to have these numbers.then we can eliminate 3,4,5,9 in other boxes.
+\item In this way the whole process was continued by elimination.
+\item Atlast by using this process we can solve the puzzle so easily.
+\item If the above process was not worked out then we can directly use 'guessing method' ("Back Tracking Method").
+\item Back Tracking Method means We will guess a number to fill the blank by one of possible numbers and try to solve the puzzle.If the puzzle is not solved even after the guess we will come back and start guessing again by choosing other number in possiblities.By continuing this  
+process we can solve the blank boxes and also the whole puzzle by guessing method which is also called "Back Tracking Method"
+
+\section{What we have done in program}
+\item  Firstly, we have to read the input file. For that we have to create a file with name "sud.txt" in unit '12'. The program will read the file and store the value in the matrix 'x(9,9)'. The boxes which have to be filled are filled with zeros.  
+\item The program then have to check for the possible values with which the empty boxes can be filled. For this we have defined another 3-d array(x2(9,9,10)). The values of this array when the third dimension is 1 is same as the values of the matrix x(9,9). The values in the third dimension are filled with 1,2,3,..9  for values 2,3,4,...10 of the third dimension respectively. Then the program starts eliminating the values in third dimesnion by puting zero if that particicular element is not possible. For example if the consist of 2,3,4,5 posssiblities then it will be (2,0),(3,0),(4,0),(5,0) in these way it will be filled and the other numbers will be eliminated.In these way the whole elimination process will be continued.If there is only one possiblity then the blank box will be filled by that number itself.Then there won't be any elimination for that box.
+\item Now comes our crook's method as per mentioned in the program and also in method we used solving the program will be runned and in if there is only one possiblity then it will be filled by that number itself.
+\item Eventhough the box doesn't filled then comes back tracking method(guessing method) which mentioned above.
+
+\section{Limitations}
+\item Give numbers only from 1to9 not more than that because it was a 9x9 matrix.If not the program won't work.
+\item While using guessing there comes a trouble in back tracking method for that the program won't give correct results for some puzzles.
+
+\section{Note} 
+I have done the project along with Maithresh. But we are submitting different reports for the same program. 
+
+\end{itemize}         
+\end{document}
