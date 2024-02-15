@@ -2,9 +2,9 @@
 Sudoku is a logic-based placement puzzle where the goal is to fill a 9×9 grid with digits so that each column, row, and 3×3 section contain the digits between 1 to 9. This project implements a sudoku solver using backtracking algorithm in Fortran.
 
 ## 🕹 How to play Sudoku 🕹
--The grid is divided into 9 boxes, each containing 9 slots.
--Some slots within the grid already contain digits. These digits cannot be changed.
--The remaining slots should be filled with digits 1-9 so that no digit is repeated in any row, column or 3x3 box.
+- The grid is divided into 9 boxes, each containing 9 slots.
+- Some slots within the grid already contain digits. These digits cannot be changed.
+- The remaining slots should be filled with digits 1-9 so that no digit is repeated in any row, column or 3x3 box.
 
 ## 🧩 How it Works
 This program uses elimination and backtracking algorithms to solve sudoku puzzles of varying difficulties. Input puzzles are read from a text file, then the program analyzes the puzzle and systematically fills in values until it is completed!
@@ -14,11 +14,11 @@ Backtracking is an algorithmic technique for solving problems recursively by try
 
 The key steps are:
 
--Find an empty slot
--Try inserting 1-9 in the slot one by one
--Check if it leads to a valid partial solution
--If valid, try to fill the next empty slot
--If at any point it leads to invalid solution, backtrack and try next number
+- Find an empty slot
+- Try inserting 1-9 in the slot one by one
+- Check if it leads to a valid partial solution
+- If valid, try to fill the next empty slot
+- If at any point it leads to invalid solution, backtrack and try next number
 
 ## Fortran Code 💻
 The Fortran code implements the backtracking algorithm to solve a sudoku puzzle. It takes the partially filled sudoku board as input and outputs the solved board.
