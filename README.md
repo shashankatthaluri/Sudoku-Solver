@@ -24,10 +24,10 @@ The key steps are:
 The Fortran code implements the backtracking algorithm to solve a sudoku puzzle. It takes the partially filled sudoku board as input and outputs the solved board.
 
 Some key aspects:
--Board is stored as a 2D array of integers
--Functions to check row, column and box validity
--Backtracking function recursively tries inserting numbers
--Prints the solved board at the end
+- Board is stored as a 2D array of integers
+- Functions to check row, column and box validity
+- Backtracking function recursively tries inserting numbers
+- Prints the solved board at the end
 
 Its a basic sudoku solver using backtracking method coded in Fortran 95 language. 
 The idea was extended to make the sudoku into tors form and I already found a pattern where for a every number there is some situation or position the number must be repeated.
